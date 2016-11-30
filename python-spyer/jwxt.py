@@ -1,5 +1,4 @@
 import os
-import urllib.request
 import re
 import requests
 from PIL import Image

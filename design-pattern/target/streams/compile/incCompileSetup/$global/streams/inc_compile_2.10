@@ -1,0 +1,244 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+14 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Book.class
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Memento$.class
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Memento.class
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoCareTaker.class
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoTest$.class
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoTest.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/BookStore.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable$$anonfun$notify2$1.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable$class.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observer.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest$.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Reader.class
+binary dependencies:
+4 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> /Users/stone/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+14 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Book
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Memento
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Memento$
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> MementoCareTaker
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> MementoTest
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> MementoTest$
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> BookStore
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observable
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observable$$anonfun$notify2$1
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observable$class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observer
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest$
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Reader
+used names:
+118 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> &&
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> +
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> +=
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> -
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> -=
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> <
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> <init>
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> <repeated>
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> ==
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> A
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> AbstractFunction1
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Any
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> AnyRef
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Array
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> ArrayBuffer
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Book
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Boolean
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Console
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> IndexOutOfBoundsException
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Int
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Iterator
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Memento
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> MementoCareTaker
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> MementoTest
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> None
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Nothing
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Object
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Predef
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Product
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> ScalaRunTime
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Serializable
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Some
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Statics
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> String
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> StringOps
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> T
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> T0
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> Unit
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> _toString
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> apply
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> asInstanceOf
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> augmentString
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> book
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> collection
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> currentPage
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> currentPage_=
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> eq
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> finalizeHash
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> format
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> getMemento
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> isInstanceOf
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> length
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> memento
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> mementoCareTaker
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> mementoList
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> mix
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> mutable
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> package
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> page
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> print
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> println
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> read
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> runtime
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> save
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> saveMemento
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> scala
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> toString
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> totalPage
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> typedProductIterator
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> undo
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> ||
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> +=
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> -=
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> <init>
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> <repeated>
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Any
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> AnyRef
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Array
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ArrayBuffer
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> BookStore
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Boolean
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Console
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Function1
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Nothing
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Object
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observable
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observer
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Predef
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Reader
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> String
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> StringOps
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> T0
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> U
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Unit
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> addBook
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> asInstanceOf
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> attach
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> augmentString
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> bookname
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> bookstore
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> bookstore1
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> bookstore2
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> collection
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> foreach
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> format
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> isInstanceOf
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> mutable
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> name
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> notify2
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> observer
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> observers
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> println
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> reader1
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> reader2
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> reader3
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> scala
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> update
+product stamps:
+14 items
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Book.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/BookStore.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Memento$.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Memento.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoCareTaker.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoTest$.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/MementoTest.class -> lastModified(1480510310000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable$$anonfun$notify2$1.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable$class.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observable.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observer.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest$.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest.class -> lastModified(1480509867000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Reader.class -> lastModified(1480509867000)
+source stamps:
+2 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> hash(4eb174d2eb9c0da093f4f05e57a2364d292c63a2)
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> hash(19cfccf823b7d7385e5814c998eb20e31574bda4)
+binary stamps:
+2 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1458538383000)
+/Users/stone/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> lastModified(1442568926000)
+class names:
+2 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/stone/.sbt/boot/scala-2.10.6/lib/scala-library.jar -> scala.Product
+internal apis:
+2 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwGT+HqgAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAqc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwo6DRYXQAB01lbWVudG9zcQB+AAzvczj2dAAGbm90aWZ5c3EAfgAMXpgzGHQABHJlYWRzcQB+AAwgOXb3dAALc2F2ZU1lbWVudG9zcQB+AAzaktyhdAALY3VycmVudFBhZ2VzcQB+AAzrf1LsdAALTWVtZW50b1Rlc3RzcQB+AAxwyiwcdAAEd2FpdHNxAH4ADLlFrGB0AA0kYXNJbnN0YW5jZU9mc3EAfgAMvSayhXQABHVuZG9zcQB+AAwguDg/dAAMcHJvZHVjdEFyaXR5c3EAfgAM958RLXQABmVxdWFsc3NxAH4ADNJyYn10AAxhc0luc3RhbmNlT2ZzcQB+AAzNJ02XdAAFcHJpbnRzcQB+AAzpubDkdAAMc3luY2hyb25pemVkc3EAfgAMHa4oJXQADSRpc0luc3RhbmNlT2ZzcQB+AAz/zGtIdAAIY2FuRXF1YWxzcQB+AAwdC7eIdAAEbWFpbnNxAH4ADPUjl8t0AA1wcm9kdWN0UHJlZml4c3EAfgAM7cBe8XQACW5vdGlmeUFsbHNxAH4ADFJA0IJ0AAxpc0luc3RhbmNlT2ZzcQB+AAxqG8L3dAAEQm9va3NxAH4ADBUmwu10AAY8aW5pdD5zcQB+AAzmP2MVdAAQTWVtZW50b0NhcmVUYWtlcnNxAH4ADHlRvY50AAI9PXNxAH4ADDZBUH10AAVjbG9uZXNxAH4ADHnbJS50AApnZXRNZW1lbnRvc3EAfgAMiLYbJ3QAC21lbWVudG9MaXN0c3EAfgAMOYZV43QABiRpbml0JHNxAH4ADEv9KMR0AARjb3B5c3EAfgAMnLub5nQACHRvU3RyaW5nc3EAfgAMEn46NnQAAiE9c3EAfgAM5Po20XQACXRvdGFsUGFnZXNxAH4ADAf0fRt0AAhnZXRDbGFzc3NxAH4ADAAZKc50AA5jb3B5JGRlZmF1bHQkMXNxAH4ADLYrp010AARzYXZlc3EAfgAMwI1CuHQAAm5lc3EAfgAMlvfTlHQAAmVxc3EAfgAMLZxgX3QAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ADCZY03d0AAIjI3NxAH4ADLPhsJl0AAhmaW5hbGl6ZXNxAH4ADOF33CV0AA5wcm9kdWN0RWxlbWVudHNxAH4ADMjXSC50AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAARzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AGt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AN3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgCCc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AGtMAAlpbmhlcml0ZWRxAH4Aa0wAB3BhcmVudHNxAH4Aa3hxAH4Ah3NxAH4AgnVxAH4AZgAAAABzcQB+AIJ1cQB+AGYAAAAAc3EAfgCCdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXB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
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwxCHLOgAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAic3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwljtyx3QACW9ic2VydmVyc3NxAH4ADG+to1B0AAZub3RpZnlzcQB+AAwNtgYfdAAEbmFtZXNxAH4ADLkaJ8V0AAR3YWl0c3EAfgAMasyVbnQADSRhc0luc3RhbmNlT2ZzcQB+AAxDkn+3dAAGZXF1YWxzc3EAfgAMf5JueHQADGFzSW5zdGFuY2VPZnNxAH4ADGgpt1l0AAxzeW5jaHJvbml6ZWRzcQB+AAy85fRmdAANJGlzSW5zdGFuY2VPZnNxAH4ADETDCvJ0AAlCb29rU3RvcmVzcQB+AAzsCZ53dAAMT2JzZXJ2ZXJUZXN0c3EAfgAMBUhfX3QABG1haW5zcQB+AAx+Ii/PdAAJbm90aWZ5QWxsc3EAfgAM04KgU3QABmRldGFjaHNxAH4ADJL+Byd0AAxpc0luc3RhbmNlT2ZzcQB+AAwrA/j9dAAGPGluaXQ+c3EAfgAMiHpeFnQABmF0dGFjaHNxAH4ADLb2aVx0AAI9PXNxAH4ADIGz/gd0AAVjbG9uZXNxAH4ADHHxOW90AAYkaW5pdCRzcQB+AAz+esfWdAAIdG9TdHJpbmdzcQB+AAwZnzzxdAACIT1zcQB+AAwPDrlmdAAHbm90aWZ5MnNxAH4ADEJ30s90AAhnZXRDbGFzc3NxAH4ADExCiHF0AAZ1cGRhdGVzcQB+AAwJLAfadAAIT2JzZXJ2ZXJzcQB+AAzh68EhdAAKT2JzZXJ2YWJsZXNxAH4ADDGR2gZ0AAJuZXNxAH4ADNiksDN0AAJlcXNxAH4ADNSBEc50AAIjI3NxAH4ADAiNQnJ0AAhmaW5hbGl6ZXNxAH4ADI4T6sZ0AAhoYXNoQ29kZXNxAH4ADLdMLR10AAdhZGRCb29rc3EAfgAMQPVr6XQABlJlYWRlcnNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAVzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AFt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAFxAH4AQ3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABVRyYWl0dXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgByc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AFtMAAlpbmhlcml0ZWRxAH4AW0wAB3BhcmVudHNxAH4AW3hxAH4Ad3NxAH4AcnVxAH4AVgAAAABzcQB+AHJ1cQB+AFYAAAAAc3EAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgB2dAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgB2c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgCPdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCQc3EAfgCDdAADQW55c3EAfgCHc3EAfgCKdXEAfgCNAAAAAnNxAH4Aj3QABXNjYWxhcQB+AJZzcQB+AFhxAH4AZXVxAH4AZgAAAABzcQB+AGgBcQB+AEF1cQB+AGoAAAAAcQB+AG51cQB+AHAAAAAAc3EAfgBycQB+AHhzcQB+AHJzcQB+AHpzcQB+AHJ1cQB+AFYAAAAAc3EAfgBydXEAfgBWAAAAAHNxAH4AcnVxAH4AgQAAAAJzcQB+AINxAH4AhnNxAH4Ah3NxAH4AinVxAH4AjQAAAANzcQB+AI9xAH4AknNxAH4Aj3EAfgCUcQB+AJZzcQB+AINxAH4AmHNxAH4Ah3NxAH4AinVxAH4AjQAAAAJzcQB+AI9xAH4AnXEAfgCWc3EAfgBYcQB+AGV1cQB+AGYAAAAAc3EAfgBoAHEAfgBRdXEAfgBqAAAAAH5xAH4AbHQACENsYXNzRGVmdXEAfgBwAAAAAHNxAH4AcnEAfgB4c3EAfgByc3EAfgB6c3EAfgBydXEAfgBWAAAAAHNxAH4AcnVxAH4AVgAAAABzcQB+AHJ1cQB+AIEAAAADc3EAfgCDdAAIT2JzZXJ2ZXJzcQB+AIdzcQB+AIp1cQB+AI0AAAABcQB+AJZzcQB+AINxAH4AhnNxAH4Ah3NxAH4AinVxAH4AjQAAAANzcQB+AI9xAH4AknNxAH4Aj3EAfgCUcQB+AJZzcQB+AINxAH4AmHNxAH4Ah3NxAH4AinVxAH4AjQAAAAJzcQB+AI9xAH4AnXEAfgCWc3EAfgBYcQB+AGV1cQB+AGYAAAAAc3EAfgBoAHEAfgAhdXEAfgBqAAAAAHEAfgC7dXEAfgBwAAAAAHNxAH4AcnEAfgB4c3EAfgByc3EAfgB6c3EAfgBydXEAfgBWAAAAAHNxAH4AcnVxAH4AVgAAAABzcQB+AHJ1cQB+AIEAAAADc3EAfgCDdAAKT2JzZXJ2YWJsZXNxAH4Ah3NxAH4AinVxAH4AjQAAAAFxAH4AlnNxAH4Ag3EAfgCGc3EAfgCHc3EAfgCKdXEAfgCNAAAAA3NxAH4Aj3EAfgCSc3EAfgCPcQB+AJRxAH4AlnNxAH4Ag3EAfgCYc3EAfgCHc3EAfgCKdXEAfgCNAAAAAnNxAH4Aj3EAfgCdcQB+AJZzcQB+AFhxAH4AZXVxAH4AZgAAAABzcQB+AGgAcQB+ACN1cQB+AGoAAAAAfnEAfgBsdAAGTW9kdWxldXEAfgBwAAAAAHNxAH4AcnEAfgB4c3EAfgByc3EAfgB6c3EAfgBydXEAfgBWAAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBccQB+AGV1cQB+AGYAAAAAc3EAfgBoAHEAfgAldXEAfgBqAAAAAHNxAH4Ag3QABFVuaXRzcQB+AIdzcQB+AIp1cQB+AI0AAAACc3EAfgCPcQB+AJ1xAH4AlnVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AQJ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AG10AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AIRbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AHZzcQB+AIN0AAVBcnJheXEAfgEKdXEAfgCBAAAAAXNxAH4Ag3QABlN0cmluZ3NxAH4Ah3NxAH4AinVxAH4AjQAAAANzcQB+AI9xAH4AknNxAH4Aj3EAfgCUcQB+AJZzcQB+AHJ1cQB+AFYAAAAAc3EAfgBydXEAfgCBAAAAAnNxAH4Ag3EAfgCGcQB+ASRzcQB+AINxAH4AmHEAfgEKdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAABzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVi1Q7jEdXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFBnPzPgjt9c4XlgUyZjrIOMVdL2k
+external apis:
+0 items
+source infos:
+2 items
+/Users/stone/github-code/PracticeCode/design-pattern/Memento.scala -> 
+AAAAAAAAAAA=
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> 
+AAAAAAAAAAA=
+compilations:
+6 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWK/g5oV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWLVDuMR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWLVERut1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWLVFaKB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWLVKAXR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWLVKh9p1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATi9Vc2Vycy9zdG9uZS9naXRodWItY29kZS9QcmFjdGljZUNvZGUvZGVzaWduLXBhdHRlcm4vdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS8=
