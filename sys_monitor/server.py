@@ -1,5 +1,4 @@
 from flask import Flask, request,render_template
-from book.book import book_bp
 import pymysql.cursors
 import json
 import monitor
