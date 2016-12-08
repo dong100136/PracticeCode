@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>cpu_监控</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="user" style="width:95%;height:300px"></div>
+    <div id="sys" style="width:95%;height:300px"></div>
+    <div id="idle" style="width:95%;height:300px"></div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="static/echarts.common.min.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var userChart = echarts.init(document.getElementById('user'));
+        var sysChart = echarts.init(document.getElementById('sys'));
+        var idleChart = echarts.init(document.getElementById('idle'));
+        user_cpu = [];
+        sys_cpu = [];
+        idle_cpu = [];
+
+        setInterval(get_cpu_data, 5000); //每一秒钟读取一次数据
+
+        function get_cpu_data() {
+            url = "/cpu";
+            if (user_cpu.length == 0) {
+                start_time = 0;
+            } else {
+                start_time = user_cpu[user_cpu.length - 1].name;
+            }
+            $.post(url, data = {
+                start: start_time
+            }).done(function(data) {
+                data = JSON.parse(data);
+                for (index in data) {
+                    item = data[index];
+                    user_cpu.push({
+                        'name': item['time'],
+                        'value': [item['time'], item['user_cpu']]
+                    });
+                    sys_cpu.push({
+                        'name': item['time'],
+                        'value': [item['time'], item['sys_cpu']]
+                    });
+                    idle_cpu.push({
+                        'name': item['time'],
+                        'value': [item['time'], item['idle_cpu']]
+                    });
+                }
+                // 指定图表的配置项和数据
+                var userOption = {
+                    title: {
+                        text: 'CPU-user数据监控',
+                        x:'center'
+                    },
+                    xAxis: {
+                        type: 'time'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value}%'
+                        }
+                    },
+                    series: [{
+                        name: 'user',
+                        type: 'line',
+                        data: user_cpu,
+                        makeLine: {
+                            data: [{
+                                type: 'average',
+                                name: "平均值"
+                            }]
+                        },
+                        smooth: true
+                    }]
+                };
+                var sysOption = {
+                    title: {
+                        text: 'CPU-sys数据监控',
+                        x:'center'
+                    },
+                    xAxis: {
+                        type: 'time'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value}%'
+                        }
+                    },
+                    series: [{
+                        name: 'sys',
+                        type: 'line',
+                        data: sys_cpu,
+                        makeLine: {
+                            data: [{
+                                type: 'average',
+                                name: "平均值"
+                            }]
+                        },
+                        smooth: true
+                    }]
+                };
+                var idleOption = {
+                    title: {
+                        text: 'CPU-idle数据监控',
+                        x:'center'
+                    },
+                    xAxis: {
+                        type: 'time'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            formatter: '{value}%'
+                        }
+                    },
+                    series: [{
+                        name: 'idle',
+                        type: 'line',
+                        data: idle_cpu,
+                        makeLine: {
+                            data: [{
+                                type: 'average',
+                                name: "平均值"
+                            }]
+                        },
+                        smooth: true
+                    }]
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                userChart.setOption(userOption);
+                sysChart.setOption(sysOption);
+                idleChart.setOption(idleOption);
+            });
+        }
+    </script>
+</body>
+
+</html>
