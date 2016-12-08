@@ -7,7 +7,6 @@ import threading
 app = Flask(__name__)
 
 app.secret_key="stone"
-app.register_blueprint(book_bp)
 
 connection = pymysql.connect(host='localhost',user='root',password='stone',db='test')
 connection.autocommit(True)
