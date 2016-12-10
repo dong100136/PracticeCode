@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style>
+        .plane {
+            border: 1px solid #fff;
+        }
+        
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<div class="plane">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+        </div>
+    </div>
+</div>
+
+<body>
+    <input id="content" name="" type="text" value="" />
+    <button onclick="send()">发送</button>
+    <div id="recv">
+
+    </div>
+</body>
+<script src="/static/jquery.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+</script>
+<script>
+    var socket = io.connect("http://localhost:5000/ws");
+    socket.on('connect', function() {
+        alert("ok!");
+    });
+    socket.on('message', function(message) {
+        alert(message['data']);
+        $("#recv").html=message;
+    })
+
+    console.log("hello");
+
+    function send() {
+        var content = $("#content").val();
+        socket.emit("message", {data:content});
+    }
+</script>
+
+</html>
