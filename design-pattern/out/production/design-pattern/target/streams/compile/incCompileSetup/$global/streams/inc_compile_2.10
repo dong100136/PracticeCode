@@ -54,7 +54,7 @@ products:
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Observer.class
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest$.class
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ObserverTest.class
-/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Reader.class
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/DataHandler.class
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/DBQuery.class
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/DBQueryFactory$.class
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/DBQueryFactory.class
@@ -131,7 +131,7 @@ class names:
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observer
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest$
-/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Reader
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> DataHandler
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> DBQuery
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> DBQueryFactory
 /Users/stone/github-code/PracticeCode/design-pattern/StaticProxy.scala -> DBQueryFactory$
@@ -336,7 +336,7 @@ used names:
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Observer
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> ObserverTest
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Predef
-/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> Reader
+/Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> DataHandler
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> String
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> StringOps
 /Users/stone/github-code/PracticeCode/design-pattern/ObserverTest.scala -> T0
@@ -449,7 +449,7 @@ product stamps:
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Point.class -> lastModified(1480773017000)
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ProxyTest$.class -> lastModified(1480837217000)
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/ProxyTest.class -> lastModified(1480837217000)
-/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Reader.class -> lastModified(1480772996000)
+/Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/DataHandler.class -> lastModified(1480772996000)
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/RealDBQuery.class -> lastModified(1480837217000)
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/RealDBQuery2.class -> lastModified(1480837218000)
 /Users/stone/github-code/PracticeCode/design-pattern/target/scala-2.10/classes/Request$.class -> lastModified(1480846795000)
