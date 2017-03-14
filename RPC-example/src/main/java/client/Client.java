@@ -81,7 +81,6 @@ public class Client {
             if (i.equals(1)){
                 UserService userService = ServiceFactory.getUserService();
                 User user = userService.getUser();
-                System.out.println("============");
                 System.out.println(user);
             }else{
                 for (Socket socket:workerList){
