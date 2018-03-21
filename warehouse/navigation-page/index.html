@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #eeeeee;
+            width: 80%;
+            margin: auto;
+        }
+
+        .search-box {
+            height: 30px;
+            margin: 100px auto;
+            width: 80%;
+        }
+
+        .search-box input {
+            width: 100%;
+            height: 100%;
+            line-height: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+        }
+
+        #container {
+            display: flex;
+            top: 100px;
+        }
+
+        #container .colunms {
+            width: 20%;
+            display: flex;
+            flex-flow: wrap;
+            flex-direction: column;
+            margin: 0 5px;
+        }
+
+        .block {
+            border-radius: 5px;
+            box-shadow: 2px 2px #eeeeee;
+            background: #800;
+            margin: 5px;
+            width: 100%;
+            display: inline-block;
+            float: right;
+        }
+
+        #bg{}
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="bg"></canvas>
+    <div class="search-box">
+        <input type="text">
+    </div>
+    <div id="container">
+        <div class="colunms"></div>
+        <div class="colunms"></div>
+        <div class="colunms"></div>
+        <div class="colunms"></div>
+        <div class="colunms"></div>
+    </div>
+    <div class="block"></div>
+</body>
+
+<script>
+    function get_random_size() {
+        return Math.round(Math.random() * 200 + 100)
+    }
+
+    function get_random_color() {
+        var R = Math.floor(Math.random() * 255);
+        var G = Math.floor(Math.random() * 255);
+        var B = Math.floor(Math.random() * 255);
+        // return [R,G,B]
+        return [255, 255, 255]
+    }
+
+    function create_many_block() {
+        /* var container = document.getElementById("container")*/
+        var container = document.getElementsByClassName("colunms")
+        for (var index in container) {
+            for (var i = 0; i < 10; i++) {
+                var newBlock = document.createElement("div")
+                newBlock.setAttribute("class", "block")
+                var randomSize = get_random_size()
+                var randomColor = get_random_color()
+                newBlock.setAttribute("style", "width2:" + String(randomSize) + "px;"
+                    + "height:" + String(randomSize) + "px;"
+                    + "background:rgb(" + randomColor[0] + "," + randomColor[1] + "," + randomColor[2] + ")")
+                container[index].appendChild(newBlock)
+            }
+        }
+    }
+
+    // create_many_block()
+
+    var canvas = document.getElementById("canvas")
+    var canvas2 = document.getElementById("canvas2")
+    var ctx = document.getElementById("canvas2").getContext("2d")
+    var context = canvas.getContext("2d")
+    var img = new Image()
+    img.src = "./test.jpeg"
+    img.onload = function () {
+        canvas.width = this.width
+        canvas.height = this.height
+        canvas2.width = this.width
+        canvas2.height = this.height
+        context.drawImage(this, 0, 0, this.width, this.height)
+        render()
+    }
+
+    function Dot(x, y, r, g, b) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.g = g;
+        this.b = b;
+    }
+
+    Dot.prototype = {
+        render: function () {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 1, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.closePath()
+            /* console.log(""+this.x+","+this.y)*/
+        }
+    }
+
+    function render() {
+        var imageData = context.getImageData(0, 0, canvas.width, canvas.height).data
+        var dots = []
+        var gap = 10
+        var x = 0, y = 0
+        var w = canvas.width, h = canvas.height
+
+        for (var i = 0; i < imageData.length; i = i + 4 * gap) {
+            x = (i % (w * 4)) / 4
+            y = Math.round(i / (4 * w))
+            if (imageData[i] > 220) {
+                dots.push(new Dot(x, y, imageData[i], imageData[i + 1], imageData[i + 2]))
+            }
+        }
+
+        for (var d in dots) {
+            dots[d].render()
+        }
+    }
+
+
+    var bgCanvas = document.getElementById("bg")
+    var bgCtx = bgCanvas.getContext("2d")
+
+    bgCanvas.width = window.innerWidth
+    bgCanvas.height = window.innerHeight
+
+    bgCtx.fillRect(25, 25, 100, 100)
+
+</script>
+<!-- <script src="index.js"></script> -->
+
+</html>

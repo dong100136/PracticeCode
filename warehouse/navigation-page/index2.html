@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- <canvas id='bg2'></canvas> -->
+    <input id="input"><input>
+    <canvas id="bg"></canvas>
+    <script>
+        "use strict";
+        var canvas = document.getElementById("bg");
+        var ctx = canvas.getContext("2d");
+        var dots = []
+        
+        var CONTEXT = {
+            RANDOM_MOVE_DISTANCE: 100,
+            INIT_DOT_NUMBER: 1200,
+            WIDTH: window.innerWidth,
+            HEIGHT: window.innerHeight,
+            MAXINUM_DOT_SIZE:5,
+            MAXINUM_DOT_MOVE_SPEED: 100,
+            DOT_GAP:15
+        }
+        
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+        
+        function UI(ctx) {
+            this.ctx = ctx
+        }
+        UI.prototype = {
+            render: function () {
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].update()
+                    dots[i].render(this.ctx)
+                }
+            },
+            initDots: function () {
+                for (var i = 0; i < CONTEXT.INIT_DOT_NUMBER; i++) {
+                    dots.push(utils.randomDot())
+                }
+                
+            },
+            initBG: function () {
+                var color = [0, 33, 0]
+                var linear = ctx.createLinearGradient(0, 0, 0, CONTEXT.HEIGHT)
+                linear.addColorStop(0, "rgb(174, 214, 241)")
+                linear.addColorStop(1, "rgb(46,191,247)")
+                ctx.fillStyle = linear
+                ctx.fillRect(0, 0, CONTEXT.WIDTH, CONTEXT.HEIGHT)
+            },
+            init: function () {
+                this.initDots()
+                this.start()
+            },
+            clear: function () {
+                this.ctx.clearRect(0, 0, CONTEXT.WIDTH, CONTEXT.HEIGHT)
+            },
+            start: function () {
+                var that = this
+                var interval = setInterval(function () {
+                    that.clear()
+                    that.initBG()
+                    that.render()
+                }, 1000 / 24)
+            },
+            clearDotStatus:function(){
+                for (var i=0;i<dots.length;i++){
+                    dots[i].clearStatus()
+                }
+            }
+        }
+        
+        function Dot(p, size, c, speed) {
+            this.x = p.x
+            this.y = p.y
+            this.c = c || [255, 255, 255]
+            this.size = size || 2
+            this.q = []
+            this.t = {
+                x: p.x,
+                y: p.y
+            },
+            this.direction = {dx:0,dy:0,timeLeft:0}
+            this.s = speed,
+            this.selected = false
+        }
+        
+        Dot.prototype = {
+            update: function () {
+                if (this.direction.timeLeft<=0&& this.q.length>0) {
+                    var np = this.q.pop()
+                    this.t.x = np.x
+                    this.t.y = np.y
+                    this.selected = np.selected
+                    this.direction = this.calcDirection(np.timeLeft)
+                }
+                
+                if (this.direction.timeLeft<=0){
+                    this.direction.dx = 0
+                    this.direction.dy = 0
+                    this.direction.timeLeft = 0
+                }
+                
+                this.direction.timeLeft--
+                this.x = this.x + this.direction.dx
+                this.y = this.y + this.direction.dy
+                
+                if (!this.selected){
+                    this.x +=Math.random()*2-1
+                    this.y +=Math.random()*2-1
+                }
+            },
+            calcDirection: function (timeLeft) {
+                var dx = (this.t.x - this.x)/timeLeft
+                var dy = (this.t.y - this.y)/timeLeft
+                return {dx:dx,dy:dy,timeLeft:timeLeft}
+            },
+            render: function (ctx) {
+                ctx.beginPath()
+                // ctx.stroke()
+                if (this.selected){
+                    ctx.fillStyle = "rgb(255,255,255)"
+                    ctx.arc(this.x, this.y, 5, 0, 2 * Math.PI)
+                }else{
+                    ctx.fillStyle = "rgba(" + this.c[0] + "," + this.c[1] + "," + this.c[2] +","+this.c[3]+ ")"
+                    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI)
+                }
+                ctx.fill()
+                ctx.closePath()
+            },
+            move: function (p) {
+                this.q.push(p)
+            },
+            // 不用的
+            randomMove: function () {
+                var rx = this.x + Math.round((Math.random() - 0.5) * CONTEXT.RANDOM_MOVE_DISTANCE)
+                var ry = this.y + Math.round((Math.random() - 0.5) * CONTEXT.RANDOM_MOVE_DISTANCE)
+                this.move(new Point(rx, ry,100,false))
+            },
+            clearStatus:function(){
+                this.selected = false
+            }
+        }
+        
+        function Point(x, y,time,selected) {
+            this.x = x
+            this.y = y
+            this.timeLeft = time?time:100
+            this.selected = selected?selected:false
+        }
+        
+        var utils = {
+            randomPoint: function () {
+                var rx = Math.round(Math.random() * CONTEXT.WIDTH)
+                var ry = Math.round(Math.random() * CONTEXT.HEIGHT)
+                return new Point(rx, ry,10,false)
+            },
+            randomColor: function () {
+                var r = Math.round(Math.random() * 20)+235
+                var g = Math.round(Math.random() * 20)+235
+                var b = Math.round(Math.random() * 20)+235
+                var a = Math.round(Math.random() * 0.3)+0.5
+                return [r, g, b, a]
+            },
+            randomSize: function () {
+                return Math.random() * CONTEXT.MAXINUM_DOT_SIZE
+                // return 3
+            },
+            randomSpeed: function () {
+                return Math.random() * CONTEXT.MAXINUM_DOT_MOVE_SPEED
+            },
+            randomDot:function(){
+                var p = utils.randomPoint()
+                var c = utils.randomColor()
+                var size = utils.randomSize()
+                var speed = utils.randomSpeed()
+                return new Dot(p, size, c, speed)
+            },
+            getTimeNow(){
+                var d = new Date()
+                var h = d.getHours()
+                h = h<10?'0'+h:''+h
+                var m = d.getMinutes()
+                m = m<10?'0'+m:''+m
+                var s = d.getSeconds()
+                s = s<10?'0'+s:''+s
+                return h+":"+m+":"+s
+            }
+        }
+        
+        function ShapeBuilder(){
+            this.innerCanvas = document.createElement("canvas")
+            // this.innerCanvas = document.getElementById("bg2")
+            this.innerCtx = this.innerCanvas.getContext("2d")
+            this.width = CONTEXT.WIDTH
+            this.height = CONTEXT.HEIGHT
+            this.innerCanvas.width = CONTEXT.WIDTH
+            this.innerCanvas.height = CONTEXT.HEIGHT
+            this.gap = CONTEXT.DOT_GAP
+        }
+        
+        ShapeBuilder.prototype = {
+            processCanvas:function(){
+                var data = this.innerCtx.getImageData(0,0,this.width,this.height).data
+                
+                var j = 0
+                for (var nx=0;nx<this.width;nx+=this.gap){
+                    for (var ny=0;ny<this.height;ny+=this.gap){
+                        var i = 4*nx+4*this.width*ny+3
+                        // var i = 4*nx+4*this.width*ny+1
+                        if (data[i]>220){
+                            if (j>dots.length-1){
+                                dots.push(utils.randomDot())
+                            }
+                            dots[j++].move(new Point(nx,ny,10,true))
+                        }
+                    }
+                }
+                for (var i=j;i<dots.length;i++){
+                    if (dots[i].selected){
+                        dots[i].clearStatus()
+                        dots[i].move(utils.randomPoint())
+                    }
+                }
+            },
+            clear:function(){
+                this.innerCtx.clearRect(0,0,CONTEXT.WIDTH,CONTEXT.HEIGHT)
+            },
+            build:function(command){
+                console.log(command)
+                switch(command){
+                    case "time":
+                    var that = this
+                    var interval = setInterval(function(){
+                        ui.clearDotStatus()
+                        that.clear()
+                        var t = utils.getTimeNow()
+                        that.buildText(t)
+                    },1000)
+                    break
+                    case "image":
+                    this.buildImage("test.jpeg")
+                    break
+                    default:
+                    this.clear()
+                    this.buildText("Wrong!")
+                }
+            },
+            buildImage:function(url){
+                var that = this
+                var img = new Image()
+                img.src = url
+                img.onload=function(){
+                    that.clear()
+                    that.innerCtx.drawImage(this,100,100,this.width*2,this.height*2)
+                    that.processCanvas()
+                }
+            },
+            buildText:function(str){
+                this.innerCtx.font="300px Arial"
+                this.innerCtx.fillText(str,100,300)
+                // this.fillStyle = "rgb(255,255,255)"
+                // this.innerCtx.fillRect(0,0,this.width,this.height)
+                this.processCanvas()
+            }
+        }
+        
+        
+        // init
+        var ui = new UI(ctx)
+        ui.init()
+        
+        var shapeBuilder = new ShapeBuilder()
+        shapeBuilder.build("time") 
+        
+        var input = document.getElementById("input")
+        document.onkeydown = function(e){
+            var key = window.event?e.keyCode:e.which
+            if (key==13){
+                console.log(input.value)
+                shapeBuilder.build(input.value)
+            }            
+        }
+        
+    </script>
+</body>
+
+</html>

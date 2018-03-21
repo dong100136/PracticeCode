@@ -1,0 +1,418 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+</head>
+
+<body>
+    <div id="app" class="container" style="margin-top:20px">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <el-input type="textarea" :autosize="{minRows:15,maxRows:15}" placeholder="在这里输入url" v-model="urlBuffer"></el-input>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:20px">
+                    <!-- <div class="col-sm-2"> -->
+                    <!-- <div class="btn btn-block btn-info" id="btn-open-file" onclick="openFile()"> 从文件导入 </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-2"> -->
+                    <!-- <div class="btn btn-block btn-info"> 保存到文件 </div> -->
+                    <!-- </div> -->
+                    <div class="col-sm-2">
+                        <div class="btn btn-block btn-danger" v-on:click="analysize"> 分析 </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="btn btn-block btn-danger" onclick="genRegex()">生成 </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="btn btn-block btn-danger" onclick="testRegex()"> 测试 </div>
+                    </div>
+                    <div class="col-sm-2"> 测试正确率:
+                        <div id="test-result"> 0.00% </div>
+                    </div>
+                </div>
+                <div class="row" style="margin:20px 5px 10px 5px">
+                    <el-input v-model="analysizeRegex" type="text" placeholder="分析得到的正则表达式"></el-input>
+                </div>
+                <div class="row" style="margin:20px 5px 10px 5px">
+                    <el-input v-model="userRegex" type="text" placeholder="自定义表达式，回车进行检测"></el-input>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <h4 class="text-primary">post-url:</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>值</th>
+                                <th>类型</th>
+                                <th>常量值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="param in postUrlList">
+                                <td>{{param.name}}</td>
+                                <td>{{param.type}}</td>
+                                <td>{{param.constantWord}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <h4 class="text-primary">params:</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>值</th>
+                                <th>类型</th>
+                                <th>选择</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="param in paramsList">
+                                <td>{{param.name}}</td>
+                                <td>{{param.type}}</td>
+                                <td> <input type="checkbox" v-bind:checked="param.checked" v-model="param.checked"></input>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.1.3/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        /* var fs = require("fs");
+                          * var app = require("electron").remote;
+                          * var dialog = app.dialog;
+                          * var textarea = $("#text");
+
+                          * function openFile() {
+                          *     dialog.showOpenDialog({
+                          *         properties: ['openFile', 'openDirectory']
+                          *     }, function(filename) {
+                          *         fs.readFile(filename[0], {
+                          *             encoding: "utf8"
+                          *         }, function(err, data) {
+                          *             app.urlBuffer = data;
+                          *         });
+                          *     });
+                          * };
+                          */
+        var app = new Vue({
+            el: "#app",
+            data: {
+                urlBuffer: "",
+                analysizeRegex: '',
+                userRegex: '',
+                paramsList: [],
+                postUrlList: [],
+                totalLine: 0,
+                avaliableLine: 0
+            },
+            methods: {
+                testRegex: testRegex,
+                analysize: analysize,
+                choice: function(e) {
+                    var element = e.currentTarget;
+                    if (element.value == 1) {
+                        element.value = 2;
+                    } else {
+                        element.value = 1;
+                    }
+                },
+                genRegex: genRegex
+            }
+        });
+
+        //从textarea中得到urls
+        function getSampleUrls() {
+            var rs = [];
+            var urls = app.urlBuffer.split('\n');
+            for (var i = 0; i < urls.length; i++) {
+                if (urls[i] != '') {
+                    rs.push(urls[i]);
+                }
+            }
+
+            app.totalLine = urls.length;
+            app.avaliableLine = rs.length;
+            return rs;
+        }
+
+        // 测试用户输入的url的正确率
+        function testRegex() {
+            var rightCount = 0;
+            var totalCount = 0;
+            var ptn = new RegExp(app.userRegex);
+
+            var urls = getSampleUrls();
+            for (i in urls) {
+                if (urls[i] != '') {
+                    totalCount = totalCount + 1;
+                    if (urls[i].match(ptn) != null) {
+                        rightCount = rightCount + 1;
+                    }
+                }
+            }
+
+            var rightRate = rightCount / totalCount;
+
+            $("#test-result").html((rightRate * 100).toFixed(2) + "%");
+        }
+
+        // 分析buffer的情况
+        function analysize() {
+            var urlBuffer = getSampleUrls();
+            var postUrlList = [];
+            var paramsList = [];
+
+            if (!checkBuffer(urlBuffer)) {
+                alert("输入的url有问题！！！╮(￣▽￣)╭");
+                return;
+            }
+
+            for (i in urlBuffer) {
+                if (urlBuffer[i] != '') {
+                    var url = urlBuffer[i];
+                    var index = url.indexOf('?');
+                    if (index < 0) {
+                        // urlList.push(url);
+                    } else {
+                        paramsList.push(getParams(url.substring(index + 1)));
+                        postUrlList.push(url.substring(0, index).split(/\/+/));
+                    }
+                }
+            }
+
+            for (var t = 0; t < postUrlList.length; t++) {
+                if (postUrlList[t][postUrlList[t].length - 1] == '') {
+                    postUrlList[t].pop();
+                }
+            }
+            app.postUrlList = analysizeUrls(postUrlList);
+            app.paramsList = analysizeParams(paramsList);
+        }
+
+        //检查buffer有没有不规范的url
+        function checkBuffer(urls) {
+            var ptn = /[^?]\?[^?]/;
+            for (var i = 0; i < urls.length; i++) {
+                var url = urls[i];
+                if (!ptn.test(url)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function analysizeParams(paramsList) {
+            var rs = {};
+
+            //未考虑字典序的问题
+            for (var i = 0; i < paramsList.length; i++) {
+                for (value in paramsList[i]) {
+                    rs[value] = {
+                        name: value,
+                        isWord: true,
+                        isDigit: true,
+                        isConstant: true,
+                        constantWord: paramsList[i][value]
+                    };
+                }
+            }
+
+            var wordPtn = /^[a-zA-Z]+$/;
+            var digitPtn = /^\d+$/;
+
+            for (var i = 0; i < paramsList.length; i++) {
+                for (value in rs) {
+                    var text = paramsList[i][value];
+                    if (!wordPtn.test(text)) {
+                        rs[value].isWord = false;
+                    }
+                    if (!digitPtn.test(text)) {
+                        rs[value].isDigit = false;
+                    }
+                    if (text != '' & rs[value].constantWord != text) {
+                        rs[value].isConstant = false;
+                    }
+                }
+            }
+
+            for (value in rs) {
+                if (rs[value].isConstant) {
+                    rs[value].type = 'Constant';
+                    rs[value].checked = false;
+                } else if (rs[value].isDigit) {
+                    rs[value].type = 'Digit';
+                    rs[value].checked = false;
+                } else if (rs[value].isWord) {
+                    rs[value].type = 'Word';
+                    rs[value].checked = false;
+                } else {
+                    rs[value].type = 'None';
+                    rs[value].checked = false;
+                }
+            }
+            return rs;
+        }
+
+        //分析前面的部分
+        function analysizeUrls(urls) {
+            var wordPtn = /^[a-zA-Z]+$/;
+            var digitPtn = /^\d+$/;
+            //constant
+            var word = [];
+            for (var i = 0; i < urls.length; i++) {
+                var urlList = urls[i];
+                for (var j = 0; j < urlList.length; j++) {
+                    var url = urlList[j];
+                    if (word[j] == null) {
+                        word[j] = {
+                            index: j,
+                            key: url,
+                            isDigit: digitPtn.test(url),
+                            isWord: wordPtn.test(url),
+                            isConstant: true
+                        };
+                    } else {
+                        if (word[j].isConstant && word[j].key != url) {
+                            word[j].isConstant = false;
+                        }
+                        if (word[j].isDigit && !digitPtn.test(url)) {
+                            word[j].isDigit = false;
+                        }
+                        if (word[j].isWord && !wordPtn.test(url)) {
+                            word[j].isWord = false;
+                        }
+                    }
+                }
+            }
+
+            for (key in word) {
+                word[key].name = "$" + key;
+                if (word[key].isConstant) {
+                    word[key].type = "Constant";
+                    word[key].constantWord = word[key].key;
+                } else if (word[key].isDigit) {
+                    word[key].type = "Digit";
+                } else if (word[key].isWord) {
+                    word[key].type = "Word";
+                } else {
+                    word[key].type = "None";
+                }
+            }
+
+            return word;
+        }
+
+        //生成url前面的部分
+        function genUrl(keyWordList) {
+            var str = '';
+            for (var i = 0; i < keyWordList.length; i++) {
+                var keyword = keyWordList[i];
+                if (keyword.isConstant) {
+                    str = str + keyword.key;
+                } else if (keyword.isDigit) {
+                    str = str + "\d+";
+                } else if (keyword.isWord) {
+                    str = str + "[a-zA-Z]+";
+                } else {
+                    str = str + '.*';
+                }
+
+                if (i != keyword.length - 1) {
+                    str = str + '/';
+                }
+            }
+            return str;
+        }
+
+        function getParams(str) {
+            var rs = {};
+            var temp = str.split('&');
+            for (var i = 0; i < temp.length; i = i + 1) {
+                t = temp[i].split('=');
+                rs[t[0]] = t[1];
+            }
+            return rs;
+        }
+
+        function genRegex() {
+            app.analysizeRegex = genPostUrlRegex() + genParamsRegex();
+        }
+
+        function genPostUrlRegex() {
+            var postUrlList = app.postUrlList;
+            var rs = "";
+            for (var i = 0; i < postUrlList.length; i++) {
+                if (i == 0 && (postUrlList[i].key == 'http:' || postUrlList[i].key == "https:")) {
+                    rs += postUrlList[i].key + "/";
+                } else if (postUrlList[i].isConstant) {
+                    rs += postUrlList[i].constantWord;
+                } else if (postUrlList[i].isDigit) {
+                    rs += "\d+";
+                } else if (postUrlList[i].isWord) {
+                    rs += "[a-zA-Z]+";
+                } else {
+                    rs += "[^/]*";
+                }
+
+                if (i != postUrlList.length - 1) {
+                    rs += "/";
+                }
+            }
+            return rs;
+        }
+
+        function genParamsRegex() {
+            var item = [];
+            var params = app.paramsList;
+            for (key in params) {
+                var p = params[key];
+                if (p.checked) {
+                    var str = "(?:.*[\?&]" + key + "=";
+                    if (p.isConstant) {
+                        str += p.constantWord + ")";
+                    } else if (p.isDigit) {
+                        str += "\\d+)";
+                    } else if (p.isWord) {
+                        str += "[a-za-Z]+)";
+                    } else {
+                        str += "[^&]*?)";
+                    }
+                    item.push(str);
+                }
+            }
+
+            if (item.length == 0) {
+                return "";
+            }
+
+            var str = item.reduce(function(x, y) {
+                return '(?:' + x + '|' + y + ')';
+            });
+            str = str + "{" + item.length + "}";
+            return str;
+        }
+    </script>
+</body>
+
+</html>
