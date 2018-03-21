@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<config>
-    <className>AddCommand</className>
-    <className>DeleteCommand</className>
-</config>
