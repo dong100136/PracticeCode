@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
+    <script src="static/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container" id="cv">
+        <div class="side">
+            <div class="me">
+                <div class="portrait" style="background-image:url(static/image/user.jpeg)"></div>
+                <div class="remodal remodal-img" data-remodal-id="portrait-modal" >
+                    <h3>请输入图片URL地址：</h3>
+                    <br/>
+                    <input type="text" id="avatar-url">
+                    <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+                </div>
+                <h1 id="username" >stone</h1>
+                <h4 id="persona-tag" >Java / Web / 云计算</h4>
+            </div>
+            <div class="profile info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xec88;</i> <span class="info-title">基本信息</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">学历</label><span class="label-value">本科</span></li>
+                    <li>
+                        <label class="left-label">毕业院校</label><span class="label-value">北京邮电大学</span></li>
+                    <li>
+                        <label class="left-label">毕业年份</label><span class="label-value">2017</span></li>
+                </ul>
+            </div>
+            <div class="contact info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xeab6;</i> <span class="info-title">联系方式</span></h2>
+                <hr>
+                <ul class="info-list">
+                    <li>
+                        <label class="left-label">qq</label><span class="label-value">137643185</span></li>
+                    <li>
+                        <label class="left-label">邮箱</label><span class="label-value">137643185@qq.com</span></li>
+                    <li>
+                        <label class="left-label">个人主页</label><span class="label-value">dong100136.github.io</span></li>
+                    <li>
+                        <label class="left-label">Github</label><span class="label-value">github.com/dong100136</span></li>
+                </ul>
+            </div>
+            <div class="skill info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xed1d;</i> <span class="info-title">技能点</span></h2>
+                <hr>
+                <ul class="progress-list">
+                    <li>
+                        <label class="left-label">Java</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">Python/爬虫</label>
+                        <progress value="30" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">matlab</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">html/css</label>
+                        <progress value="50" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">Javascript</label>
+                        <progress value="50" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">docker/k8s</label>
+                        <progress value="30" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">golang</label>
+                        <progress value="20" max="100"></progress>
+                    </li>
+                </ul>
+            </div>
+            <div class="stack info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xeaa2;</i> <span class="info-title">技术栈</span></h2>
+                <hr>
+                <ul class="stack-list">
+                    <li>
+                        <label class="left-label">前端</label><span class="label-value">jQuery，Boostrap</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">后端</label><span class="label-value">MySQL、Spring</span></li>
+                    </li>
+                    <li>
+                        <label class="left-label">其它</label><span class="label-value">PS,PR</span></li>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont">&#x3488;</i> <span class="info-title">个人微信</span></h2>
+                <hr>
+                <div class="weixin">
+                    <img src="http://i2.buimg.com/567571/ffe670ddfabe22b3.png" alt="">
+
+                </div>
+            </div>
+            <div class="remodal remodal-img" data-remodal-id="weixin-modal">
+                <h3>请输入图片URL地址：</h3>
+                <br/>
+                <input type="text" id="weixin-url">
+                <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="education info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xebca;</i> <span class="info-title">教育经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3><b>2013/09~至今</b>  北京邮电大学 信息与通信工程学院 信息工程 本科</h3>
+                        <p><b>主修课程: </b>信息论 通信原理 程序设计 模式识别 数字图像处理 JAVA 程序设计等</b></p>
+                        <p><b>专业综合排名: </b>大一学年:10/180 大二学年:16/180 大三学年:4/180  英语六级通过</p>
+                        <p>综合智育排名: 8/180</p>
+                        <p>在校期间,曾多次获校三好学生,院学生会优秀干部和校一等奖学金,担任信通院学生会科技部副部长，“爱教室”学生管委会主席和大班组织委员</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="work info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xeac9;</i> <span class="info-title">工作经历</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3><b>2014/09-2015/09</b> 信息与通信工程学院学生会科技部 副部长</h3>
+                        <p>科技部主要负责学生会的影视类宣传资料, 晚会的中控及设备管理,在担任副部长期间,负责晚会宣传,暖场, 串场视频的制作,晚会中控工作组织等,曾组织部员参与完成北邮信通院新版招新宣传视频的制作</p>
+                    </li>
+                    <li>
+                        <h3><b>2013/09-2015/09</b> 信息与通信工程学院 阳光志愿者协会</h3>
+                        <p>主要为组织制作各种宣传品，包括海报，喷绘，小册子等</p>
+                    </li>
+                </ul class="experience-list">
+            </div>
+            <div class="project info-unit right-list">
+                <h2 class="info-header"><i class="iconfont">&#xeaf4;</i> <span class="info-title">个人项目</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3><b>2016/02-2016/03</b> 微软创新杯 Spotlight 盲人阅读器 负责核心代码</h3>
+                        <p>
+                            <b>项目介绍:</b> 力求解决盲人阅读资料稀缺，价格昂贵的问题，为盲人带来全新的阅读体验。其中需要使用Opencv等开源框架在树莓派上搭建了一套系统，可以自动对前方的书籍进行文字提取，然后通过OCR等技术将文字转换为语音输出
+                            <br/>
+                            <b>项目贡献:</b> 产品设计，技术方案选型，图像处理方面代码的编写
+                            <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2016/04-2016/09</b> 网研院交换组实习生 CaaS云平台的搭建  docker kubernetes spring</h3>
+                        <p>
+                            <b>项目介绍:</b> 该项目是使用现在较为前沿的docker和kubernetes搭建CaaS云平台，提供容器服务，其中包括容器的调度，储存方案，监控，日志采集，网络调整等等方面
+                            <br/>
+                            <b>项目贡献:</b> 在实习前期主要以学习为主，学习了一些云计算的概念和技术，然后协助学长进行开发，主要负责http接口的编写，底层容器框架的调用，监控平台的搭建等等
+                            <br/>
+                            <b>学习技能:</b> java编程，Spring框架，HTML/CSS/JS，docker容器技术，kubernetes集群，Restful接口及框架，svn，maven，linux
+                            <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2014/05-2015/05</b> 大学生创新创业训练项目 国家级项目 基础情绪识别系统 C++</h3>
+                        <p>
+                            <b>项目介绍:</b> 主要是利用 LBP 图像特征提取和 SVM<br/>机器学习对表情图像进行分类和标识,项目最终被评为大学生创新训练国家级项目,并发表相关论文一篇 
+                            <br/>
+                            <b>项目贡献:</b> 设计了项目使用的技术方案, 自学Opencv及QT框架, 编写了项目的大部分代码
+                            <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2015/04-2015/05</b> 北邮大学生创新展 投票网站  JAVA WEB</h3>
+                        <p>
+                            <b>项目介绍:</b> 为北邮大学生创新展设计的项目投票网站,可以展示项目信息，进行投票和实时显示用户投票的情况,选出最受观众欢迎的项目
+                            <br/>
+                            <b>项目贡献:</b> 主要负责投票网站的前后端开发和测试,学习了网站的相关知识和团队协作技巧等
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2015/05-2015/06</b> 大学生创新创业训练项目 增强现实楼盘展示平台 Android Unity 项目组长</h3>
+                        <p>
+                            <b>项目介绍:</b> 利用增强现实实现楼盘展示，家具装潢即时预览和家具DIY定制等功能，提供炫酷的广告效果,该项目最终被评为国家级项目，并获得北邮创新论坛一等奖 
+                            <br/>
+                            <b>项目贡献:</b> 在项目中担任组长,负责团队管理,项目方向及技术方向确定,核心程序开发等 
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2015/08-2016/1</b> 创业项目 广场舞智能衣方案设计及 Android 客户端开发</h3>
+                        <p>
+                            <b>项目介绍:</b> 该项目是为老年人提供的智能广场舞衣服,以降低音乐对周围的影响，提高广场舞的体验并提供相应的教学辅助功能
+                            <br/>
+                            <b>项目贡献:</b> 负责了前期软硬件技术方案设计和 Android 客户端编写, 主要功能包括音乐播放器部分和主界面部分，该项目使用了FM，ZigBee等相关的无线技术
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2015/09</b> 数学建模比赛  国赛北京市二等奖  美赛H奖 Matlab</h3>
+                        <p>
+                            曾参加大学生数学竞赛的国赛和美赛,在小组中有良好的表现,主要担任算法程序的编写,数学模型的设计和建 立,对 Matlab 较为熟悉,在参赛期间学习了很多的算法，数学功底扎实，学习能力较强
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2016/05</b>Android项目 Vlink 维度连接 负责人及产品设计</h3>
+                        <p>
+                            <b>项目介绍:</b> 利用二维码，条形码作为纽带，为一些兴趣相同的人群提供一个独特的交流空间，富有创意
+                            <br/>
+                            <b>项目贡献:</b> 负责其中前端代码的编写和最终产品形态的设计
+                            <br/>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><b>2016/09</b>弹幕π chrome插件版 爬虫部分技术实现  JavaScript</h3>
+                        <p>
+                            <b>项目介绍:</b> 将购物和弹幕以一种全新的方式结合起来，让弹幕无处不在！！主要节省人们在购物的时间，在浏览物品的时候可以同时以弹幕的形式来观看
+                            <br/>
+                            <b>项目贡献:</b> 因为本项目以插件形式存在，运行环境为chrome浏览器，所以使用JavaScript来编写爬虫程序，爬取相关的评论信息
+                            <br/>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+<!--             <div class="trophy info-unit">
+                <h2 class="info-header"><i class="iconfont">&#xe80b;</i> <span class="info-title">奖项与证书</span></h2>
+                <hr>
+                <ul class="experience-list">
+                    <li>
+                        <h3>小学生作文二等奖</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
+                        </p>
+                    </li> 
+                    <li>
+                        <h3>曾获统一冰红茶“再来一瓶”奖</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
+                        </p>
+                    </li> 
+                    <li>
+                        <h3>这一行也是为了凑版面</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam。
+                        </p>
+                    </li>                     
+            </div> -->
+ <!--            <div class="aboutme info-unit right-paragraph">
+                <h2 class="info-header"><i class="iconfont">&#xec0a;</i> <span class="info-title">自我评价</span></h2>
+                <hr>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
